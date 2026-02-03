@@ -57,8 +57,8 @@
     // Fade in the outline container
     animate('.outline-container', {
       opacity: [0, 1],
-      duration: 1000,
-      delay: 300,
+      duration: 5000,
+      delay: 700,
       easing: 'easeOutQuad',
     });
 
@@ -73,7 +73,7 @@
       animate(line, {
         strokeDashoffset: [length, 0, 0, -length, -length, length],
         delay: index * 150,
-        duration: 5000,
+        duration: 7000,
         easing: 'easeInOutSine',
         loop: true,
       });
@@ -364,7 +364,7 @@
         class="inline-block text-emerald-300 transition-all duration-300 ease-in-out"
         class:opacity-0={!isVisible}
         class:translate-y-2={!isVisible}>{words[currentWordIndex]}</span
-      >
+      ><sup class="ml-2 text-[10px] font-medium tracking-wide text-emerald-400/80">BETA</sup>
     </h1>
 
     <p
@@ -375,11 +375,16 @@
     </p>
 
     <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <button
-        class="capitalize cta-btn rounded-lg bg-white px-8 py-3 font-medium text-slate-900 opacity-0 transition hover:bg-slate-100"
+      <a
+        href="https://github.com/syauqi357/siakad-madrasah/releases/download/TESTRELEASE/TRIALWEB1.zip"
       >
-        download
-      </button>
+        <button aria-label="Download"
+          class="capitalize cta-btn cursor-pointer rounded-lg bg-white px-8 py-3 font-medium text-slate-900 opacity-0 transition hover:bg-slate-100 flex items-center gap-2"
+        >
+          download
+          <span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[9px] font-semibold uppercase text-white">Beta</span>
+        </button>
+      </a>
       <button
         class="cta-btn backdrop-blur-xs rounded-lg border border-slate-700 px-8 py-3 font-medium text-white opacity-0 transition hover:border-slate-500 hover:bg-slate-800/50"
       >

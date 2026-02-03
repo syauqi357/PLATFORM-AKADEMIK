@@ -32,6 +32,7 @@
           />
         </svg>
         <span class="text-white font-semibold text-lg">Platform Akademik</span>
+        <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-emerald-400 border border-emerald-500/30">Beta</span>
       </a>
 
       <!-- Desktop Navigation -->
