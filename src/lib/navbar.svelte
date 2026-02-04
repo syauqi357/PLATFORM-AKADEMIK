@@ -1,8 +1,15 @@
 <script>
+  import { currentPage } from './stores/navigation.js';
+
   let isMenuOpen = false;
 
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
+  }
+
+  function navigate(page) {
+    currentPage.set(page);
+    isMenuOpen = false;
   }
 </script>
 
@@ -12,7 +19,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3">
+      <button on:click={() => navigate('home')} class="flex items-center gap-3">
         <svg
           class="w-8 h-7"
           viewBox="0 0 137.27 118.67"
@@ -33,7 +40,7 @@
         </svg>
         <span class="text-white font-semibold text-lg">Platform Akademik</span>
         <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-emerald-400 border border-emerald-500/30">Beta</span>
-      </a>
+      </button>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-8">
@@ -45,9 +52,9 @@
           href="#about"
           class="text-slate-400 hover:text-white transition-colors">About</a
         >
-        <a
-          href="#docs"
-          class="text-slate-400 hover:text-white transition-colors">Docs</a
+        <button
+          on:click={() => navigate('docs')}
+          class="text-slate-400 hover:text-white transition-colors">Docs</button
         >
         <a
           href="https://github.com"
@@ -129,10 +136,10 @@
           class="block text-slate-400 hover:text-white transition-colors py-2"
           >About</a
         >
-        <a
-          href="#docs"
+        <button
+          on:click={() => navigate('docs')}
           class="block text-slate-400 hover:text-white transition-colors py-2"
-          >Docs</a
+          >Docs</button
         >
         <a
           href="https://github.com"
