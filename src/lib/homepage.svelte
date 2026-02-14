@@ -376,7 +376,7 @@
 
     <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
       <a
-        href="https://github.com/syauqi357/siakad-madrasah/releases/download/v2-electron/SIAKAD.Madrasah.Setup.1.0.0.exe"
+        href="https://github.com/syauqi357/siakad-madrasah/releases/download/v2-electron/SIAKAD.Madrasah.Setup.1.0.2.exe"
       >
         <button aria-label="Download"
           class="capitalize cta-btn cursor-pointer rounded-lg bg-white px-8 py-3 font-medium text-slate-900 opacity-0 transition hover:bg-slate-100 flex items-center gap-2"
